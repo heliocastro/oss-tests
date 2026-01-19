@@ -1,0 +1,34 @@
+SPDXID: "SPDXRef-DOCUMENT"
+spdxVersion: "SPDX-2.2"
+creationInfo:
+  created: "2020-07-23T18:30:22Z"
+  creators:
+  - "Person: Helio Chissini de Castro"
+  licenseListVersion: "3.9"
+name: "oss-tests-0.1.0"
+dataLicense: "CC0-1.0"
+documentNamespace: "http://spdx.org/spdxdocs/spdx-document-oss-tests"
+documentDescribes:
+- "SPDXRef-Package-oss-tests"
+externalDocumentRefs:
+- externalDocumentId: "DocumentRef-rapidjson-1.1.0"
+  spdxDocument: "../oss/rapidjson/rapidjson.spdx.yml"
+  checksum:
+    algorithm: "SHA1"
+    checksumValue: "969dddf88b9fe6dedea30a3af118c33a044a57ba"
+packages:
+- SPDXID: "SPDXRef-Package-myproject"
+  description: "Awesome product created by Example Inc."
+  copyrightText: "Copyright (C) 2020 Example Inc."
+  downloadLocation: "https://github.com/heliocastro/oss-tests.git"
+  filesAnalyzed: false
+  homepage: "https://example.com/products/xyz"
+  licenseConcluded:  "NOASSERTION"
+  licenseDeclared: "MIT"
+  name: "oss-tests"
+  versionInfo: "0.1.0"
+  originator: "Person: Helio Chissini de Castro"
+relationships:
+- spdxElementId: "SPDXRef-Package-oss-tests"
+  relationshipType: "DEPENDS_ON"
+  relatedSpdxElement: "DocumentRef-rapidjson-1.1.0:SPDXRef-Package-rapidjson"

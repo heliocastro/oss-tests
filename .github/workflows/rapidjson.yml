@@ -1,0 +1,31 @@
+name: Test SPDX Package Manager in Ort
+
+on:
+  workflow_dispatch:
+
+jobs:
+  mirror:
+    name: Test RapidJson
+    runs-on: ubuntu-24.04
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: heliocastro/setup-ort@main
+        with:
+          sdks:
+            python
+
+      - name: Perform Basic Ort commands
+        shell: bash
+        run: |
+          ort --debug analyze -i ort/spdx/project -o output
+          ort --info scan -i output/analyzer-result.yml -o output
+          ort --info report -f WebApp -i output/scan-result.yml -o output
+
+      - name: Store output files
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: ort-output
+          path: output

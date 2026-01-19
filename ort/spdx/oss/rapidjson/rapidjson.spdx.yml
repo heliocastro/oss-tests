@@ -1,0 +1,22 @@
+SPDXID: 'SPDXRef-DOCUMENT'
+spdxVersion: 'SPDX-2.2'
+creationInfo:
+  created: '2024-06-13T00:00:00Z'
+  creators:
+    - 'Person: Helio Chissini de Castro'
+name: 'rapidjson-1.1.0'
+dataLicense: 'CC0-1.0'
+documentNamespace: 'http://spdx.org/spdxdocs/spdx-document-rapidjson'
+documentDescribes:
+  - 'SPDXRef-Package-rapidjson'
+packages:
+  - SPDXID: 'SPDXRef-Package-rapidjson'
+    description: 'A fast JSON parser/generator for C++ with both SAX/DOM style API'
+    downloadLocation: 'git+https://github.com/Tencent/rapidjson.git'
+    filesAnalyzed: false
+    homepage: 'https://rapidjson.org/'
+    licenseConcluded: 'NOASSERTION'
+    licenseDeclared: 'MIT'
+    name: 'rapidjson'
+    versionInfo: '1.1.0'
+    originator: 'Person: Helio Chissini de Castro'
