@@ -25,7 +25,6 @@ packages:
   - SPDXID: 'SPDXRef-Package-rapidjson'
     description: 'A fast JSON parser/generator for C++ with both SAX/DOM style API'
     downloadLocation: 'git+https://github.com/Tencent/rapidjson.git'
-    packageFileName: '../oss/rapidjson'
     filesAnalyzed: false
     homepage: 'https://rapidjson.org/'
     licenseConcluded: 'NOASSERTION'
