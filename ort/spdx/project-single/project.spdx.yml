@@ -10,17 +10,11 @@ dataLicense: 'CC0-1.0'
 documentNamespace: 'http://spdx.org/spdxdocs/spdx-document-oss-tests'
 documentDescribes:
   - 'SPDXRef-Package-oss-tests'
-externalDocumentRefs:
-  - externalDocumentId: 'DocumentRef-rapidjson-1.1.0'
-    spdxDocument: '../oss/rapidjson/rapidjson.spdx.yml'
-    checksum:
-      algorithm: 'SHA1'
-      checksumValue: '969dddf88b9fe6dedea30a3af118c33a044a57ba'
 packages:
   - SPDXID: 'SPDXRef-Package-oss-tests'
     description: 'Awesome product created by Example Inc.'
     copyrightText: 'Copyright (C) 2020 Example Inc.'
-    downloadLocation: 'https://github.com/heliocastro/oss-tests.git'
+    downloadLocation: 'git+https://github.com/heliocastro/oss-tests'
     filesAnalyzed: false
     homepage: 'https://example.com/products/xyz'
     licenseConcluded: 'NOASSERTION'
@@ -28,7 +22,18 @@ packages:
     name: 'oss-tests'
     versionInfo: '0.1.0'
     originator: 'Person: Helio Chissini de Castro'
+  - SPDXID: 'SPDXRef-Package-rapidjson'
+    description: 'A fast JSON parser/generator for C++ with both SAX/DOM style API'
+    downloadLocation: 'git+https://github.com/Tencent/rapidjson.git'
+    packageFileName: '../oss/rapidjson'
+    filesAnalyzed: false
+    homepage: 'https://rapidjson.org/'
+    licenseConcluded: 'NOASSERTION'
+    licenseDeclared: 'MIT'
+    name: 'rapidjson'
+    versionInfo: '1.1.0'
+    originator: 'Person: Helio Chissini de Castro'
 relationships:
   - spdxElementId: 'SPDXRef-Package-oss-tests'
-    relationshipType: 'DEPENDS_ON'
-    relatedSpdxElement: 'DocumentRef-rapidjson-1.1.0:SPDXRef-Package-rapidjson'
+    relationshipType: 'DYNAMIC_LINK'
+    relatedSpdxElement: 'SPDXRef-Package-rapidjson'
